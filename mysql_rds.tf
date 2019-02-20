@@ -56,4 +56,5 @@ resource "aws_db_instance" "mysql_db" {
   password               = "${var.rds-db-password}"
   vpc_security_group_ids = ["${aws_security_group.rds_security_group.id}"]
   db_subnet_group_name   = "${aws_db_subnet_group.db_subnetgroup.id}"
+  skip_final_snapshot    = true
 }
