@@ -49,3 +49,11 @@ output "config_map_aws_auth" {
 output "kubeconfig" {
   value = "${local.kubeconfig}"
 }
+
+output "db_instance_id" {
+  value = "${aws_db_instance.mysql_db.id}"
+}
+
+output "db_instance_address" {
+  value = "${aws_db_instance.mysql_db.address}"
+}
